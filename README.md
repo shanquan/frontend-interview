@@ -1,6 +1,6 @@
 # Web FrontEnd Interview Project
 
-It's a vue 2.x project build with ElementUI and Axios. You can only develop in the same framework.
+It's a vue 2.x project built with ElementUI and Axios. You can only develop in the same framework, please check your task [here](##开发任务).
 
 ## Project Setup
 [nodejs](https://nodejs.org/en/) is required
@@ -46,6 +46,8 @@ yarn build
 
 1. 点返回链接，页面跳转库存查询界面（PageLevel1）
 2. 点击导出按钮，导出`public/mock/export.xlsx`表供用户下载
+  
+请先fork项目并新建分支，开发完成后提交PR即可。
 
 ## Mock Dev
 
