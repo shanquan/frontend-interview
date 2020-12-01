@@ -1,0 +1,15 @@
+{
+  "DATA": [
+    {
+      "id": "1",
+      "code": "DZL",
+      "name": "电子料"
+    },
+    {
+      "id": "2",
+      "code": "JGJ",
+      "name": "结构件"
+    }
+  ],
+  "RESULT": "PASS"
+}

@@ -1,0 +1,16 @@
+{
+    "DATA": [
+      {
+        "storehouseCode": null,
+        "productPn": "12993819-00",
+        "projectName": "LOKI",
+        "palletNo": "70112201121010714",
+        "pnDescripe": null,
+        "status": 0,
+        "qty": 45,
+        "storehouseQty": null,
+        "createTime": null
+      }
+    ],
+    "RESULT": "PASS"
+  }

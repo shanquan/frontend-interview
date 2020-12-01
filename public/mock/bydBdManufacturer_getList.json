@@ -1,0 +1,185 @@
+{
+  "DATA": [
+    {
+      "id": "1",
+      "supplierId": 1,
+      "code": "012060",
+      "name": "信息产业部邮电工业标准化研究所",
+      "email": null,
+      "supplierCode": "012060",
+      "supplierName": "信息产业部邮电工业标准化研究所"
+    },
+    {
+      "id": "2",
+      "supplierId": 2,
+      "code": "011140",
+      "name": "京东方科技集团股份有限公司",
+      "email": null,
+      "supplierCode": "011140",
+      "supplierName": "京东方科技集团股份有限公司"
+    },
+    {
+      "id": "3",
+      "supplierId": 3,
+      "code": "Z00ZPW",
+      "name": "安洁科技股份有限公司",
+      "email": null,
+      "supplierCode": "Z00ZPW",
+      "supplierName": "安洁科技股份有限公司"
+    },
+    {
+      "id": "4",
+      "supplierId": 4,
+      "code": "A00943",
+      "name": "NXP Semiconductors Netherlands B.V.",
+      "email": null,
+      "supplierCode": "A00943",
+      "supplierName": "NXP Semiconductors Netherlands B.V."
+    },
+    {
+      "id": "5",
+      "supplierId": 5,
+      "code": "411200",
+      "name": "SCG HONG KONG SAR LIMITED",
+      "email": null,
+      "supplierCode": "411200",
+      "supplierName": "SCG HONG KONG SAR LIMITED"
+    },
+    {
+      "id": "6",
+      "supplierId": 6,
+      "code": "412239",
+      "name": "INFINEON TECHNOLOGIES ASIA PACIFIC PTE LTD",
+      "email": null,
+      "supplierCode": "412239",
+      "supplierName": "INFINEON TECHNOLOGIES ASIA PACIFIC PTE LTD"
+    },
+    {
+      "id": "7",
+      "supplierId": 7,
+      "code": "411151",
+      "name": "DIODES HONG KONG LIMITED",
+      "email": null,
+      "supplierCode": "411151",
+      "supplierName": "DIODES HONG KONG LIMITED"
+    },
+    {
+      "id": "8",
+      "supplierId": 8,
+      "code": "411084",
+      "name": "EVLITE ELECTRONICS CO.,LIMITED",
+      "email": null,
+      "supplierCode": "411084",
+      "supplierName": "EVLITE ELECTRONICS CO.,LIMITED"
+    },
+    {
+      "id": "9",
+      "supplierId": 9,
+      "code": "411058",
+      "name": "LITE-ON ELECTRONICS H.K.LTD.",
+      "email": null,
+      "supplierCode": "411058",
+      "supplierName": "LITE-ON ELECTRONICS H.K.LTD."
+    },
+    {
+      "id": "10",
+      "supplierId": 10,
+      "code": "Z00009",
+      "name": "PHILIPS LUMILEDS LIGHTING COMPANY LLC",
+      "email": null,
+      "supplierCode": "Z00009",
+      "supplierName": "PHILIPS LUMILEDS LIGHTING COMPANY LLC"
+    },
+    {
+      "id": "11",
+      "supplierId": 11,
+      "code": "411045",
+      "name": "STMICROELECTRONICS ASIA PACIFIC PTE LTD",
+      "email": null,
+      "supplierCode": "411045",
+      "supplierName": "STMICROELECTRONICS ASIA PACIFIC PTE LTD"
+    },
+    {
+      "id": "12",
+      "supplierId": 12,
+      "code": "411138",
+      "name": "PROTEK DEVICES (HK) LIMITED",
+      "email": null,
+      "supplierCode": "411138",
+      "supplierName": "PROTEK DEVICES (HK) LIMITED"
+    },
+    {
+      "id": "13",
+      "supplierId": 13,
+      "code": "601024",
+      "name": "Semtech International AG",
+      "email": null,
+      "supplierCode": "601024",
+      "supplierName": "Semtech International AG"
+    },
+    {
+      "id": "14",
+      "supplierId": 14,
+      "code": "431021",
+      "name": "LITTELFUSE FAR EAST PTE LTD",
+      "email": null,
+      "supplierCode": "431021",
+      "supplierName": "LITTELFUSE FAR EAST PTE LTD"
+    },
+    {
+      "id": "15",
+      "supplierId": 15,
+      "code": "441111",
+      "name": "BOURNS,INC.",
+      "email": null,
+      "supplierCode": "441111",
+      "supplierName": "BOURNS,INC."
+    },
+    {
+      "id": "16",
+      "supplierId": 16,
+      "code": "A00050",
+      "name": "深圳得势贸易有限公司",
+      "email": null,
+      "supplierCode": "A00050",
+      "supplierName": "深圳得势贸易有限公司"
+    },
+    {
+      "id": "17",
+      "supplierId": 17,
+      "code": "884132",
+      "name": "ALPS ELECTRONICS HONG KONG LIMITED",
+      "email": null,
+      "supplierCode": "884132",
+      "supplierName": "ALPS ELECTRONICS HONG KONG LIMITED"
+    },
+    {
+      "id": "18",
+      "supplierId": 18,
+      "code": "A00046",
+      "name": "圜达实业股份有限公司",
+      "email": null,
+      "supplierCode": "A00046",
+      "supplierName": "圜达实业股份有限公司"
+    },
+    {
+      "id": "19",
+      "supplierId": 19,
+      "code": "Z001HH",
+      "name": "C-E (HONG KONG) LIMITED",
+      "email": null,
+      "supplierCode": "Z001HH",
+      "supplierName": "C-E (HONG KONG) LIMITED"
+    },
+    {
+      "id": "20",
+      "supplierId": 20,
+      "code": "141126",
+      "name": "常州市武进江南放电管有限公司",
+      "email": null,
+      "supplierCode": "141126",
+      "supplierName": "常州市武进江南放电管有限公司"
+    }
+  ],
+  "RESULT": "PASS"
+}

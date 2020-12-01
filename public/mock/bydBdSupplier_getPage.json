@@ -1,0 +1,57 @@
+{
+    "DATA": {
+        "total": 21,
+        "page": [{
+                "id": "1",
+                "code": "012060",
+                "name": "信息产业部邮电工业标准化研究所"
+            },
+            {
+                "id": "2",
+                "code": "011140",
+                "name": "京东方科技集团股份有限公司"
+            },
+            {
+                "id": "3",
+                "code": "Z00ZPW",
+                "name": "安洁科技股份有限公司"
+            },
+            {
+                "id": "4",
+                "code": "A00943",
+                "name": "NXP Semiconductors Netherlands B.V."
+            },
+            {
+                "id": "5",
+                "code": "411200",
+                "name": "SCG HONG KONG SAR LIMITED"
+            },
+            {
+                "id": "6",
+                "code": "412239",
+                "name": "INFINEON TECHNOLOGIES ASIA PACIFIC PTE LTD"
+            },
+            {
+                "id": "7",
+                "code": "411151",
+                "name": "DIODES HONG KONG LIMITED"
+            },
+            {
+                "id": "8",
+                "code": "411084",
+                "name": "EVLITE ELECTRONICS CO.,LIMITED"
+            },
+            {
+                "id": "9",
+                "code": "411058",
+                "name": "LITE-ON ELECTRONICS H.K.LTD."
+            },
+            {
+                "id": "10",
+                "code": "Z00009",
+                "name": "PHILIPS LUMILEDS LIGHTING COMPANY LLC"
+            }
+        ]
+    },
+    "RESULT": "PASS"
+}

@@ -1,0 +1,121 @@
+### 库存查询报表接口定义
+@url = http://10.12.5.188:20002
+@gb_url = {{url}}/api/gb
+# @gb_url = http://10.76.48.231:10090/gb/api
+@token={{login.response.body.DATA.TOKEN}}
+
+# @name login
+POST {{url}}/user/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "account":"2327665",
+    "password":"12345678"
+}
+
+# > user_login.json
+# TOKEN: 用户凭证
+
+###
+# @name bydGbWarehouseStock_getStockReportL1
+# @description 获取库存报表 参数以换行符分割
+POST {{gb_url}}/bydGbWarehouseStock/getStockReportL1 HTTP/1.1
+Content-Type: application/json
+token: {{token}}
+
+{
+    "projectName":"LOKI",
+    "productPn":"12993819-00",
+    "storehouseCode":"",
+    "palletNo":"70112201121010714\n70112201123005985",
+    "boxNo":"BYDSM2020112110437",
+    "sn":"H97DQCRVQ1GC\nH97DQYEUQ1GC",
+    "productOrderGb":"4310550288\n4310550124"
+}
+
+# > bydGbWarehouseStock_getStockReportL1.json
+
+
+###
+# @name bydGbWarehouseStock_getStockReportL1Count
+# @description 获取库存报表数据数数量 参数以换行符分割
+POST {{gb_url}}/bydGbWarehouseStock/getStockReportL1Count HTTP/1.1
+Content-Type: application/json
+token: {{token}}
+
+{
+    "projectName":"LOKI",
+    "productPn":"12993819-00",
+    "storehouseCode":"",
+    "palletNo":"70112201121010714\n70112201123005985",
+    "boxNo":"BYDSM2020112110437",
+    "sn":"H97DQCRVQ1GC\nH97DQYEUQ1GC",
+    "productOrderGb":"4310550288\n4310550124"
+}
+
+
+# > bydGbWarehouseStock_getStockReportL1Count.json
+
+###
+# @name bydGbWarehouseStock_getStockReportL1ByPage
+# @description 分页获取库存报表 参数以换行符分割
+POST {{gb_url}}/bydGbWarehouseStock/getStockReportL1ByPage HTTP/1.1
+Content-Type: application/json
+token: {{token}}
+
+{
+    "startRow":0,
+    "pageSize":6,
+    "projectName":"LOKI",  
+    "productPn":"12993819-00",
+    "storehouseCode":"",
+    "palletNo":"70112201121010714\n70112201123005985",
+    "boxNo":"BYDSM2020112110437",
+    "sn":"H97DQCRVQ1GC\nH97DQYEUQ1GC",
+    "productOrderGb":"4310550288\n4310550124"
+}
+
+# > bydGbWarehouseStock_getStockReportL1ByPage.json
+
+###
+# @name bydGbWarehouseStock_getStockReportL2
+# @description 根据仓储号和托盘号号获取物料数据
+POST {{gb_url}}/bydGbWarehouseStock/getStockReportL2 HTTP/1.1
+Content-Type: application/json
+token: {{token}}
+
+{
+    "storehouseCode":"123",
+    "palletNo":"70112201123005985"
+}
+
+
+# > bydGbWarehouseStock_getStockReportL2.json
+
+
+
+###
+# @name bydGbWarehouseStock_exportL1Excel
+# @description 下载库存报表 参数以换行符分割
+GET {{gb_url}}/bydGbWarehouseStock/exportL1Excel HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+token: {{token}}
+
+projectName=LOKI
+&productPn=12993819-00
+&storehouseCode=
+&palletNo=70112201121010714
+&boxNo=BYDSM2020112110437
+&sn=H97DQCRVQ1GC\nH97DQYEUQ1GC
+&productOrderGb=4310550288\n4310550124
+
+
+###
+# @name bydGbWarehouseStock_exportL2Excel
+# @description 下载仓储号或托盘号下的详细信息
+GET {{gb_url}}/bydGbWarehouseStock/exportL2Excel HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+token: {{token}}
+
+storehouseCode=123
+&palletNo=70112201121010714

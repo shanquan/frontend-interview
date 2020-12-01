@@ -1,0 +1,17 @@
+{
+    "DATA":[{
+        "storehouseCode": null,
+        "productPn": "12993819-00",
+        "palletNo": "70112201121010714",
+        "pnDescripe": null,
+        "createTime": "2020-11-23T14:18:16",
+        "boxNo": "BYDSM2020112110437",
+        "sn": "H96DQ5B6Q1GC",
+        "productOrderGb": "4310550287",
+        "status": 0,
+        "storehouseQty": null,
+        "projectName": "LOKI"
+    }
+    ],
+"RESULT": "PASS"
+}

@@ -1,0 +1,320 @@
+/**
+ * @author: wang.weili
+ * @since : 2020/11/14
+ */
+
+
+/** 
+ * global css
+ */
+
+body {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: baseline;
+}
+
+* {
+    margin: 0;
+    padding: 0
+}
+
+a {
+    text-decoration: none;
+    display: inline-block
+}
+
+.center {
+    text-align: center
+}
+
+.primary {
+    color: #409eff
+}
+
+.ml10 {
+    margin-left: 10px
+}
+
+.mt10 {
+    margin-top: 10px
+}
+
+.padding {
+    padding: 10px
+}
+
+.nowrap {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.hide {
+    display: none
+}
+
+.w60 {
+    width: 60px
+}
+
+.w60 .el-input__inner {
+    min-width: 60px
+}
+
+.w100 {
+    width: 100px
+}
+
+.w100 .el-input__inner {
+    min-width: 100px
+}
+
+input:read-only{
+    background-color: #F5F7FA;
+    border:none;  
+    color: #606266;
+}
+/** 
+ *elementUI css
+ */
+
+.el-main {
+    padding: 0;
+    overflow-x: hidden
+}
+
+.el-header.main {
+    font-size: 12px;
+    background-color: rgb(64, 158, 255);
+    color: #fff;
+    line-height: 60px;
+    padding-right: 2px;
+    /**fixed */
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 9
+}
+
+.el-message {
+    top: 40px!important;
+    max-width: 98%;
+    min-width: 320px;
+}
+
+.el-header .title {
+    font-size: 18px;
+    display: inline-flex;
+    padding: 0 10px;
+    /* max-width: 160px; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.el-footer {
+    line-height: 60px;
+    font-size: 14px;
+    border-top: solid 1px #eaeefb;
+}
+
+.el-container.frame {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.el-container.topper {
+    top: 45px
+}
+.el-container.bottomer {
+    bottom: 60px
+}
+.el-input__inner {
+    min-width: 106px
+}
+
+.pda-box .el-form-item {
+    margin-bottom: 25px
+}
+
+.el-breadcrumb {
+    position: fixed;
+    z-index: 10;
+    margin-top: 1px;
+    background-color: #fff;
+    width: 100%;
+}
+
+.has-breadcrumb {
+    padding-top: 36px;
+}
+
+.lh20 {
+    line-height: 20px;
+}
+
+.lh20 .el-form-item__label {
+    line-height: 20px
+}
+
+.detail .el-input.is-disabled .el-input__inner {
+    color: #606266;
+    cursor: default;
+}
+
+.detail .el-textarea.is-disabled .el-textarea__inner {
+    color: #606266;
+    cursor: default;
+}
+
+.detail .el-radio__input.is-disabled+span.el-radio__label {
+    color: #606266;
+    cursor: default;
+}
+
+
+/**
+ * framework css 
+ */
+
+.main .el-dropdown {
+    color: #fff
+}
+
+.header-logo {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.subheader {
+    border-bottom: solid 1px #eaeefb;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    color: #409EFF
+}
+
+.subheader .el-button-back {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+}
+
+.mb-header {
+    line-height: 45px;
+    background-color: #409EFF;
+    color: #fff;
+}
+
+.mb-header .el-page-header {
+    line-height: 45px
+}
+
+.mb-header .el-page-header__content {
+    color: #fff
+}
+
+.main-view {
+    height: 100%;
+    padding: 0px;
+}
+
+.pda-box {
+    padding: 10px 5px;
+    max-width: 360px;
+}
+
+.admin-menu:not(.el-menu--collapse) {
+    width: 200px;
+    min-height: 400px;
+}
+
+.float_btn {
+    position: absolute;
+    top: 65px;
+    right: 5px;
+    z-index: 3
+}
+
+.form-bar {
+    padding-top: 12px;
+    padding-left: 10px;
+    background-color: #f2f2f2;
+}
+
+.form-bar .el-form-item {
+    margin-bottom: 12px;
+}
+
+.ad {
+    position: fixed;
+    right: 5px;
+    top: 1px;
+    width: 140px;
+    text-align: right;
+    background-color: #409eff;
+    height: 58px
+}
+
+.ad .el-button {
+    color: #fff;
+    margin-left: 10px
+}
+
+.ad span {
+    font-size: 14px
+}
+
+.el-autocomplete-suggestion.m-autocomplete li {
+    line-height: normal;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.el-autocomplete-suggestion.m-autocomplete li .name {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.el-autocomplete-suggestion.m-autocomplete li .code {
+    font-size: 12px;
+    color: #b4b4b4;
+}
+
+.float-left {
+    float: left
+}
+
+.select-notes {
+    float: right;
+    color: #8492a6;
+    font-size: 13px
+}
+
+.import-btn {
+    display: inline-block;
+    margin-left: 10px
+}
+
+
+/**
+ * media query
+*/
+
+@media screen and (max-width: 400px) {
+    .pda-box {
+        margin: 0 auto
+    }
+    .el-header.main {
+        padding-left: 5px
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .el-header.main {
+        padding-left: 10px
+    }
+}
