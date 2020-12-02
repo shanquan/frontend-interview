@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#729FDC">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:text="Sample"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tvCust"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginLeft="@dimen/x30"
+        android:layout_marginTop="@dimen/y30"
+        android:text="客 户:"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvRemarks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCust"
+        android:layout_marginLeft="@dimen/x30"
+        android:layout_marginTop="@dimen/y20"
+        android:text="备 注:"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+
+
+    <FrameLayout
+        android:id="@+id/flCust"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tvCust"
+        android:layout_alignTop="@id/tvCust"
+        android:layout_marginLeft="@dimen/x10"
+        android:layout_marginRight="@dimen/x30"
+        android:layout_toRightOf="@id/tvCust"
+        android:background="@drawable/et_background2">
+
+        <Spinner
+            android:id="@+id/spClient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/client"/>
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/etRemarks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tvRemarks"
+        android:layout_alignTop="@id/tvRemarks"
+        android:layout_marginLeft="@dimen/x10"
+        android:layout_marginRight="@dimen/x30"
+        android:layout_toRightOf="@id/tvRemarks"
+        android:background="@drawable/et_background2"
+        android:imeOptions="actionDone"
+        android:singleLine="true" />
+
+    <Button
+        android:id="@+id/btnLaunch"
+        android:layout_width="@dimen/x200"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/etRemarks"
+        android:layout_below="@id/tvRemarks"
+        android:layout_marginTop="@dimen/y20"
+        android:text="启动"
+        android:textSize="22sp" />
+
+
+</RelativeLayout>
+</layout>

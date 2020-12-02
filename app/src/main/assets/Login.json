@@ -1,0 +1,62 @@
+{
+    "LOGIN_ID": "125659",
+    "RESULT": "PASS",
+    "CLIENTS": [
+        {
+            "code": "CSHW",
+            "createName": "admin",
+            "createTime": "2015-07-10T09:35:50",
+            "id": 1,
+            "name": "华为",
+            "orderNum": 0,
+            "remark": null,
+            "state": 1,
+            "updateName": "2046775",
+            "updateTime": "2017-01-04T16:34:34"
+        }
+    ],
+    "ServerIp": "172.31.19.11",
+    "ServerPort": 80,
+    "SERVICE_RUNTIME": 78,
+    "DEPARTMENT": {
+        "createName": "2046775",
+        "createTime": "2019-07-23T22:58:25",
+        "id": 2,
+        "managerId": 0,
+        "name": "长沙工厂",
+        "orderNum": 0,
+        "remark": null,
+        "updateName": null,
+        "updateTime": null
+    },
+    "ACCOUNT": {
+        "beginTime": null,
+        "createName": "2046775",
+        "createTime": "2019-07-23T22:59:05",
+        "currentLoginIp": "10.76.46.143",
+        "currentLoginLogId": 125659,
+        "departmentId": 2,
+        "email": "admin@byd.com",
+        "endTime": null,
+        "fingerPrint": null,
+        "id": 2,
+        "lastChangePassword": "2019-07-23T22:59:05",
+        "lockLogin": 1,
+        "login": "admin",
+        "loginIp": null,
+        "myLine": null,
+        "myWarehouse": null,
+        "name": "admin",
+        "newPassword": "",
+        "orderNum": 0,
+        "password": "6512bd43d9caa6e02c990b0a82652dca",
+        "phone1": "18620330118",
+        "phone2": null,
+        "pwdErrNum": 0,
+        "remark": null,
+        "state": 0,
+        "updateName": null,
+        "updateTime": null,
+        "workNumber": "admin"
+    }
+}

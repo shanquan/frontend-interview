@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<title>Sample</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./css/w3.css">
+<link rel="stylesheet" href="./css/index.css">
+<script src="./js/w3.js"></script>
+<script src="./js/common.js"></script>
+<body>
+    <div class="w3-container sample">
+
+        <div class="w3-row-padding">
+            <div class="w3-col label">客户</div>
+            <div class="w3-rest">
+                <select class="w3-select w3-border" name="clients">
+                    <option value="1">华为</option>
+                    <option value="2">小米</option>
+                    <option value="3">雷蛇</option>
+                </select>
+            </div>
+            <div class="w3-col label">工段</div>
+            <div class="w3-rest">
+                <input autofocus class="w3-input w3-border" type="text" name="workStation" placeholder="">
+            </div>
+            <div class="w3-col label">线体</div>
+            <div class="w3-rest">
+                <select id="lines" class="w3-select w3-border">
+                    <option>---</option>
+                    <option w3-repeat="x in DATA">{{x}}</option>
+                </select>
+            </div>
+            <div class="w3-col label">备注</div>
+            <div class="w3-rest">
+                <input class="w3-input w3-border" type="text" name="remark" placeholder="">
+            </div>
+        </div>
+
+        <button class="w3-btn w3-blue w3-ripple"> 启 动 </button>
+
+    </div>
+    <div class="toast w3-panel w3-dark-grey w3-round w3-animate-bottom">启动成功</div>
+    <style>
+        .sample {
+            padding: 50px 20px 0 20px;
+        }
+        .sample button {
+            margin-left: 66px;
+            width: 200px
+        }
+    </style>
+    <script>
+        var app = {
+            initialize: function() {
+                try{
+                    common.initialize();
+                    document.getElementsByName("workStation")[0].focus();
+                    document.onkeydown = this.onkeydown.bind(this);
+                    document.querySelector(".w3-btn").addEventListener('click',this.onStart.bind(this),false);
+                }catch(e){
+                    console.log(e)
+                }
+            },
+            onkeydown: function(e){
+                if (window.event)
+                    e = window.event;
+                var code = e.charCode || e.keyCode;
+                if (code == 13) {
+                    if(e.target == document.getElementsByName("workStation")[0] && e.target.value){
+                            if(e.target.value=="101"){
+                                //获取并显示线体
+                                w3.getHttpObject("../GetLines.json", function(Obj){
+                                    w3.displayObject("lines", Obj);
+                                    w3.removeClass('option','hide');
+                                    common.setNextFocus(e.target);
+                                });
+                            }else{
+                                w3.displayObject("lines", {"DATA":[]});
+                            }
+                        }
+                        common.setNextFocus(e.target);
+                }
+            },
+            onStart: function(){
+                let client = document.getElementsByName("clients")[0];
+                let workStation = document.getElementsByName("workStation")[0];
+                let line = document.querySelector('#lines');
+                let remark = document.getElementsByName("remark")[0];
+                if(!workStation.value){
+                    alert("工段不能为空")
+                }else if(line.value=='---'){
+                    alert("线体不能为空")
+                }else{
+                    w3.show('.toast');
+                    setTimeout(function(){
+                        w3.hide('.toast');
+                    },3000);
+                    client.value="1";
+                    common.backToClear(workStation);
+                    w3.displayObject("lines", {"DATA":[]});
+                    remark.value="";
+                }
+            }
+        }
+        app.initialize();
+    </script>
+</body>
+
+</html>

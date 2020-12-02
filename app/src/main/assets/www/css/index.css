@@ -1,0 +1,16 @@
+﻿/*Jar 2020 by wwl */
+.label {
+  font-size: 16px;
+  width: 60px;
+  line-height: 38px
+}
+.w3-rest {
+  margin-bottom: 20px
+}
+select,input {
+  height: 38px;
+  background-color:#fff
+}
+.w3-select{padding:6px 0}
+.hide{display:none}
+.toast{position: absolute;bottom: 30px;width: 100%;text-align: center;}

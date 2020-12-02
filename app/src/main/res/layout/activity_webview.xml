@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#6495ED"
+            android:padding="5dp"
+            android:text="网页访问"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
+
+        <ImageButton
+            android:id="@+id/btnRefresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/tvTitle"
+            android:layout_marginRight="@dimen/x5"
+            android:layout_marginTop="@dimen/y2"
+            android:background="#00FFFFFF"
+            app:srcCompat="@android:drawable/stat_notify_sync" />
+
+        <FrameLayout
+            android:id="@+id/web_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tvTitle"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</layout>

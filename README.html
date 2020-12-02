@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>interview</title>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+        
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        
+        
+    </head>
+    <body class="vscode-light">
+        <h1 id="interview">interview</h1>
+<p>Android pda interview project</p>
+<h2 id="questions">Questions</h2>
+<h3 id="javaandroid%e5%9f%ba%e6%9c%ac%e9%97%ae%e9%a2%98">Java,Android基本问题</h3>
+<ol>
+<li>int与Integer的区别，HashMap与ArrayList区别</li>
+<li>String、StringBuffer、StringBuilder区别和使用场景</li>
+<li>谈谈java泛型、抽象类、内部类、接口概念与用法
+<ul>
+<li>A</li>
+</ul>
+<pre><code class="language-java"><div> <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span></span>{
+   <span class="hljs-keyword">private</span> String data=<span class="hljs-string">"data"</span>;
+   <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">test</span></span>{
+     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">go</span><span class="hljs-params">()</span></span>{
+       System.out.println(data);
+     }
+   }
+ }
+</div></code></pre>
+<ul>
+<li>B</li>
+</ul>
+<pre><code class="language-java"><div> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span></span>{
+   <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> age;
+   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Animal</span><span class="hljs-params">(<span class="hljs-keyword">int</span> age)</span></span>{
+     <span class="hljs-keyword">this</span>.age = age;
+     System.out.println(<span class="hljs-string">"初始化Animal"</span>);
+   }
+   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">move</span><span class="hljs-params">()</span></span>{
+     System.out.println(<span class="hljs-string">"跑步数："</span>+<span class="hljs-keyword">this</span>.age);
+   }
+ }
+ <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Animal</span></span>{
+   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Dog</span><span class="hljs-params">(<span class="hljs-keyword">int</span> age)</span></span>{
+     <span class="hljs-keyword">super</span>(age);
+     System.out.println(<span class="hljs-string">"初始化Dog"</span>);
+   }
+ }
+ <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BigDog</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Dog</span></span>{
+   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">BigDog</span><span class="hljs-params">()</span></span>{
+     <span class="hljs-keyword">super</span>(<span class="hljs-number">10</span>);
+     System.out.println(<span class="hljs-string">"初始化BigDog"</span>);
+   }
+   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>{
+     BigDog a = <span class="hljs-keyword">new</span> BigDog();
+     a.move();
+   }
+ }
+</div></code></pre>
+<ul>
+<li>C</li>
+</ul>
+<pre><code class="language-java"><div> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span>&lt;<span class="hljs-title">T</span>&gt;
+ </span>{
+     T obj;
+     Test(T obj) {  <span class="hljs-keyword">this</span>.obj = obj;  }
+     <span class="hljs-function"><span class="hljs-keyword">public</span> T <span class="hljs-title">getObject</span><span class="hljs-params">()</span>  </span>{ <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.obj; }
+ }
+ <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span>
+ </span>{
+   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span> <span class="hljs-params">(String[] args)</span>
+   </span>{
+     Test &lt;Integer&gt; iObj = <span class="hljs-keyword">new</span> Test&lt;Integer&gt;(<span class="hljs-number">15</span>);
+     System.out.println(iObj.getObject());
+     Test &lt;String&gt; sObj = <span class="hljs-keyword">new</span> Test&lt;String&gt;(<span class="hljs-string">"GeeksForGeeks"</span>); 
+     System.out.println(sObj.getObject());
+   }
+ }
+</div></code></pre>
+<ul>
+<li>D</li>
+</ul>
+<pre><code class="language-java"><div> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">in1</span>
+ </span>{
+   <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> a = <span class="hljs-number">10</span>;
+   <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">display</span><span class="hljs-params">()</span></span>;
+ }
+ <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">testClass</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">in1</span>
+ </span>{
+   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">display</span><span class="hljs-params">()</span>
+   </span>{
+   System.out.println(<span class="hljs-string">"test"</span>);
+   }
+   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span> <span class="hljs-params">(String[] args)</span>
+   </span>{
+   testClass t = <span class="hljs-keyword">new</span> testClass();
+   t.display();
+   System.out.println(a);
+   }
+ }
+</div></code></pre>
+</li>
+<li>熟悉哪些设计模式
+<blockquote>
+<p>工厂模式<code>Factory</code>、单例模式<code>Singleton</code>、建造者模式<code>Builder</code></p>
+</blockquote>
+<ul>
+<li>A</li>
+</ul>
+<pre><code class="language-java"><div> <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Sender</span> </span>{  
+   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Send</span><span class="hljs-params">()</span></span>;  
+ }
+
+ <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MailSender</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Sender</span> </span>{  
+   <span class="hljs-meta">@Override</span>  
+   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Send</span><span class="hljs-params">()</span> </span>{  
+       System.out.println(<span class="hljs-string">"this is mailsender!"</span>);  
+   }  
+ }
+
+ <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SmsSender</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Sender</span> </span>{  
+   <span class="hljs-meta">@Override</span>  
+   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Send</span><span class="hljs-params">()</span> </span>{  
+       System.out.println(<span class="hljs-string">"this is sms sender!"</span>);  
+   }  
+ }
+
+ <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SendCreater</span> </span>{  
+   <span class="hljs-function"><span class="hljs-keyword">public</span> Sender <span class="hljs-title">produce</span><span class="hljs-params">(String type)</span> </span>{  
+       <span class="hljs-keyword">if</span> (<span class="hljs-string">"mail"</span>.equals(type)) {  
+           <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> MailSender();  
+       } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-string">"sms"</span>.equals(type)) {  
+           <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> SmsSender();  
+       } <span class="hljs-keyword">else</span> {  
+           System.out.println(<span class="hljs-string">"请输入正确的类型!"</span>);  
+           <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;  
+       }  
+   }  
+ } 
+
+ <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CreaterTest</span> </span>{  
+   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{  
+       SendCreater creater = <span class="hljs-keyword">new</span> SendCreater();  
+       Sender sender = creater.produce(<span class="hljs-string">"sms"</span>);  
+       sender.Send();  
+   }  
+ }
+</div></code></pre>
+<ul>
+<li>B</li>
+</ul>
+<pre><code class="language-java"><div><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Creater</span> </span>{
+   <span class="hljs-keyword">static</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Student</span></span>{
+       String name = <span class="hljs-keyword">null</span> ;
+       <span class="hljs-keyword">int</span> number = -<span class="hljs-number">1</span> ;
+       String sex = <span class="hljs-keyword">null</span> ;
+       <span class="hljs-keyword">int</span> age = -<span class="hljs-number">1</span> ;
+       String school = <span class="hljs-keyword">null</span> ;
+       <span class="hljs-keyword">static</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">StudentCreater</span></span>{
+           String name = <span class="hljs-keyword">null</span> ;
+           <span class="hljs-keyword">int</span> number = -<span class="hljs-number">1</span> ;
+           String sex = <span class="hljs-keyword">null</span> ;
+           <span class="hljs-keyword">int</span> age = -<span class="hljs-number">1</span> ;
+           String school = <span class="hljs-keyword">null</span> ;
+           <span class="hljs-function"><span class="hljs-keyword">public</span> StudentCreater <span class="hljs-title">setName</span><span class="hljs-params">(String name)</span> </span>{
+               <span class="hljs-keyword">this</span>.name = name;
+               <span class="hljs-keyword">return</span>  <span class="hljs-keyword">this</span> ;
+           }
+
+           <span class="hljs-function"><span class="hljs-keyword">public</span> StudentCreater <span class="hljs-title">setNumber</span><span class="hljs-params">(<span class="hljs-keyword">int</span> number)</span> </span>{
+               <span class="hljs-keyword">this</span>.number = number;
+               <span class="hljs-keyword">return</span>  <span class="hljs-keyword">this</span> ;
+           }
+
+           <span class="hljs-function"><span class="hljs-keyword">public</span> StudentCreater <span class="hljs-title">setSex</span><span class="hljs-params">(String sex)</span> </span>{
+               <span class="hljs-keyword">this</span>.sex = sex;
+               <span class="hljs-keyword">return</span>  <span class="hljs-keyword">this</span> ;
+           }
+
+           <span class="hljs-function"><span class="hljs-keyword">public</span> StudentCreater <span class="hljs-title">setAge</span><span class="hljs-params">(<span class="hljs-keyword">int</span> age)</span> </span>{
+               <span class="hljs-keyword">this</span>.age = age;
+               <span class="hljs-keyword">return</span>  <span class="hljs-keyword">this</span> ;
+           }
+
+           <span class="hljs-function"><span class="hljs-keyword">public</span> StudentCreater <span class="hljs-title">setSchool</span><span class="hljs-params">(String school)</span> </span>{
+               <span class="hljs-keyword">this</span>.school = school;
+               <span class="hljs-keyword">return</span>  <span class="hljs-keyword">this</span> ;
+           }
+           <span class="hljs-function"><span class="hljs-keyword">public</span> Student <span class="hljs-title">create</span><span class="hljs-params">()</span> </span>{
+               <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Student(<span class="hljs-keyword">this</span>);
+           }
+       }
+       <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Student</span><span class="hljs-params">(StudentCreater creater)</span></span>{
+           <span class="hljs-keyword">this</span>.age = creater.age;
+           <span class="hljs-keyword">this</span>.name = creater.name;
+           <span class="hljs-keyword">this</span>.number = creater.number;
+           <span class="hljs-keyword">this</span>.school = creater.school ;
+           <span class="hljs-keyword">this</span>.sex = creater.sex ;
+       }
+   }
+   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">( String[] args )</span></span>{
+       Student a = <span class="hljs-keyword">new</span> Student.StudentCreater().setAge(<span class="hljs-number">13</span>).setName(<span class="hljs-string">"LiHua"</span>).create();
+       Student b = <span class="hljs-keyword">new</span> Student.StudentCreater().setSchool(<span class="hljs-string">"sc"</span>).setSex(<span class="hljs-string">"Male"</span>).setName(<span class="hljs-string">"ZhangSan"</span>).create();
+   }
+ }
+</div></code></pre>
+<ul>
+<li>C</li>
+</ul>
+<pre><code class="language-java"><div> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Teacher</span> </span>{
+   <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-title">Teacher</span><span class="hljs-params">()</span> </span>{}
+   <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Teacher t = <span class="hljs-keyword">null</span> ;
+   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">synchronized</span> <span class="hljs-keyword">static</span> Teacher <span class="hljs-title">getTeacher</span><span class="hljs-params">()</span> </span>{
+     <span class="hljs-keyword">if</span>(t==<span class="hljs-keyword">null</span>) {
+       t = <span class="hljs-keyword">new</span> Teacher() ;
+     }
+     <span class="hljs-keyword">return</span> t ;
+   }
+ }
+ 
+ <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TeacherDemo</span> </span>{
+   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+     Teacher t1 = Teacher.getTeacher() ;
+     Teacher t2 = Teacher.getTeacher() ;
+     System.out.println(t1==t2);
+     System.out.println(t1);
+     System.out.println(t2);
+   }
+ }
+</div></code></pre>
+</li>
+<li>排序算法
+<blockquote>
+<p>冒泡排序<code>BubbleSort</code>，选择排序<code>SelectSort</code>，插入排序<code>InsertSort</code>:<code>O(n2)</code>;快速排序<code>QuickSort</code>:<code>O(N*logN)</code></p>
+</blockquote>
+<ul>
+<li>A</li>
+</ul>
+<pre><code class="language-java"><div><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">SortD</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a[],<span class="hljs-keyword">int</span> l,<span class="hljs-keyword">int</span> r)</span></span>{
+     <span class="hljs-keyword">if</span>(l&gt;=r)
+       <span class="hljs-keyword">return</span>;
+     <span class="hljs-keyword">int</span> i = l; <span class="hljs-keyword">int</span> j = r; <span class="hljs-keyword">int</span> key = a[l];
+     <span class="hljs-keyword">while</span>(i&lt;j){
+         <span class="hljs-keyword">while</span>(i&lt;j &amp;&amp; a[j]&gt;=key)
+             j--;
+         <span class="hljs-keyword">if</span>(i&lt;j){
+             a[i] = a[j];
+             i++;
+         }
+         <span class="hljs-keyword">while</span>(i&lt;j &amp;&amp; a[i]&lt;key)
+             i++;
+         <span class="hljs-keyword">if</span>(i&lt;j){
+             a[j] = a[i];
+             j--;
+         }
+     }
+     a[i] = key;
+     SortD(a, l, i-<span class="hljs-number">1</span>);
+     SortD(a, i+<span class="hljs-number">1</span>, r);
+ }
+</div></code></pre>
+<ul>
+<li>B</li>
+</ul>
+<pre><code class="language-java"><div> <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">SortC</span><span class="hljs-params">(<span class="hljs-keyword">int</span> array[],<span class="hljs-keyword">int</span> lenth)</span></span>{
+   <span class="hljs-keyword">int</span> temp;  
+   <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;lenth-<span class="hljs-number">1</span>;i++){
+       <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=i+<span class="hljs-number">1</span>;j&gt;<span class="hljs-number">0</span>;j--){
+           <span class="hljs-keyword">if</span>(array[j] &lt; array[j-<span class="hljs-number">1</span>]){
+               temp = array[j-<span class="hljs-number">1</span>];
+               array[j-<span class="hljs-number">1</span>] = array[j];
+               array[j] = temp;
+           }<span class="hljs-keyword">else</span>{
+               <span class="hljs-keyword">break</span>;
+           }
+       }
+   }
+ }
+</div></code></pre>
+<ul>
+<li>C</li>
+</ul>
+<pre><code class="language-java"><div> <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">SortB</span><span class="hljs-params">(<span class="hljs-keyword">int</span> array[],<span class="hljs-keyword">int</span> lenth)</span></span>{
+   <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;lenth-<span class="hljs-number">1</span>;i++){
+       <span class="hljs-keyword">int</span> minIndex = i;
+       <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=i+<span class="hljs-number">1</span>;j&lt;lenth;j++){
+          <span class="hljs-keyword">if</span>(array[j]&lt;array[minIndex]){
+              minIndex = j;
+          }
+       }
+       <span class="hljs-keyword">if</span>(minIndex != i){
+           <span class="hljs-keyword">int</span> temp = array[i];
+           array[i] = array[minIndex];
+           array[minIndex] = temp;
+       }
+   }
+ }
+</div></code></pre>
+<ul>
+<li>D</li>
+</ul>
+<pre><code class="language-java"><div> <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">SortA</span><span class="hljs-params">(<span class="hljs-keyword">int</span> [] arr)</span></span>{
+     <span class="hljs-keyword">int</span> temp;
+     <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>; i&lt;arr.length-<span class="hljs-number">1</span>; i++){
+         <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=arr.length-<span class="hljs-number">1</span>; j&gt;i; j--){
+             <span class="hljs-keyword">if</span>(arr[j] &lt; arr[j-<span class="hljs-number">1</span>]){
+                 temp = arr[j];
+                 arr[j] = arr[j-<span class="hljs-number">1</span>];
+                 arr[j-<span class="hljs-number">1</span>] = temp;
+             }
+         }
+     }
+ }
+</div></code></pre>
+</li>
+<li>Android四大组件包括以下哪些？（多选）
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> Activity</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> Controller</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> Service</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> Model</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> BroadcastReceiver</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> Intent</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> ContentProvider</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> View</li>
+</ul>
+</li>
+<li>一个安卓界面即为一个<code>?</code></li>
+<li><code>?</code>负责后台任务的运行</li>
+<li><code>?</code>负责广播</li>
+<li><code>?</code>负责应用的对外分享数据功能</li>
+<li><code>?</code>充当四大组件信使，完成数据的组件传递及开启组件的功能</li>
+<li>使用XML文件对安卓应用界面进行布局，常用的布局(<code>layout</code>)有（多选）：
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> LinearLayout</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> TableLayout</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> FrameLayout</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> RelativeLayout</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> GridLayout</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> PercentLinearLayout</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> AbsoluteLayout</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> PositionLayout</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> ConstraintLayout</li>
+</ul>
+</li>
+<li>接口数据一般采用<code>?</code>（数据格式）</li>
+<li>JSON解析用<code>?</code>（包名或库名）</li>
+<li>Android网络图片请求进行三级缓存，分别为？加载顺序？</li>
+<li>图片加载框架有哪些<code>?</code>他们之间的区别是什么？</li>
+<li>网络框架有哪些<code>?</code>他们之间的区别是什么？</li>
+<li>Http请求中包含哪些内容？，上传文件和发起请求的post请求的区别？</li>
+<li>Android异步消息处理机制？</li>
+<li>ANR是什么？怎样避免和解决ANR？</li>
+<li>RecyclerView和ListView的区别？</li>
+<li>如何在服务器接口未准备好的情况下调试接口？</li>
+<li>padding和margin的区别。给固定大小及wrap_content的textView设置padding，它的可点击区域会变化吗？</li>
+<li>有没有了解过以下语言/包/技术/框架？（了解的请勾选）
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> Cordova</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> Reative Native</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> flutter</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> Kotlin</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> Android Jetpack</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> AndroidX</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> Dragger</li>
+</ul>
+</li>
+</ol>
+<h3 id="%e5%ad%a6%e4%b9%a0%e8%81%8c%e4%b8%9a%e7%bb%8f%e5%8e%86%e7%9b%b8%e5%85%b3">学习/职业经历相关</h3>
+<ol>
+<li>Java语言用了多久？开发入门方式是怎样的？（大学课程、网络自学、培训机构）</li>
+<li>对自己的职业能力与方向大致判断下？感兴趣的有哪些技术方向（网页收藏、博客或公众号订阅）？职业规划是怎样的？</li>
+<li>自身经历中用过哪些开发工具？自学过或试用过哪些技术？分别是何种渠道自学的？</li>
+<li>在工作中做过的自认为比较有挑战的需求是什么，是怎么实现的？</li>
+<li>简单列举下几个工作中遇到的Bug是怎样的，及解决过程？</li>
+<li>在团队中担任怎样的角色，团队的开发流程是怎样的？</li>
+<li>有开源项目吗？参与的角色？</li>
+<li>平时怎么获取新知识？</li>
+<li>有没有自己独立负责技术架构与选型的项目？选择依据有哪些？</li>
+<li>有没有用过/熟悉的Linux系统命令行工具？哪些？</li>
+<li>有没有阅读过英文文档（README或documents），打开看看？</li>
+</ol>
+<h2 id="android-studio%e5%bc%80%e5%8f%91%e4%bb%bb%e5%8a%a1">Android Studio开发任务</h2>
+<p>请在此项目源码基础上完成sample页面的开发（用java，不能用html/js），实现与sample2页面相同的功能，组件与交互也需相同，主题外观不必完全一致。</p>
+
+    </body>
+    </html>
