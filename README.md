@@ -46,8 +46,6 @@ yarn build
 
 1. 点返回链接，页面跳转库存查询界面（PageLevel1）
 2. 点击导出按钮，导出`public/mock/export.xlsx`表供用户下载
-  
-请先fork项目并新建分支，开发完成后提交PR即可。
 
 ## Mock Dev
 
